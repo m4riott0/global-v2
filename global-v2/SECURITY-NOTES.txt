@@ -1,0 +1,12 @@
+SEGURANCA — LIMITES IMPORTANTES
+
+Este pacote aplica várias camadas de proteção dentro do Claude Code, mas NÃO é um sandbox nem uma garantia absoluta.
+
+- O deny list e o hook bloqueiam comandos comuns de Git que alteram histórico/versões e ferramentas SQL/migração conhecidas quando executadas como comandos Bash/PowerShell pelo Claude.
+- Eles não impedem que um script Node, Python, .NET, outro executável, extensão do VS Code ou processo externo tente abrir uma conexão de rede.
+- Não disponibilize credenciais de Oracle/SQL Server ao Claude: não as deixe em arquivos .env, appsettings, variáveis de ambiente, MCPs, argumentos de comando ou arquivos acessíveis no workspace.
+- A restrição Read de appsettings e connection strings é por padrão de caminho e pode não cobrir nomes/formatos personalizados.
+- A proteção vale para ações mediadas pelo Claude Code, não para você executar manualmente operações no terminal.
+- Para isolamento forte, use uma VM/conta Windows/container dedicado sem credenciais e com firewall/rede bloqueando acesso aos servidores de banco.
+- Não use --dangerously-skip-permissions nem bypassPermissions.
+- O hook falha fechado se não conseguir interpretar o input. Se PowerShell/hook não funcionar no seu Windows, não remova a proteção sem entender o motivo.

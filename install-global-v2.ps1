@@ -3,8 +3,8 @@
 # Personaliza o Claude Code (~\.claude). NAO instala o Claude Code.
 
 # >>> Edite apenas estas tres linhas depois de criar o repositorio no GitHub <<<
-$__CGV2_Owner  = "SEU_USUARIO"
-$__CGV2_Repo   = "claude-installers"
+$__CGV2_Owner  = "m4riott0"
+$__CGV2_Repo   = "global-v2"
 $__CGV2_Branch = "main"
 
 $__CGV2_LocalRoot = if ($PSCommandPath) { Split-Path -Parent $PSCommandPath } else { $null }

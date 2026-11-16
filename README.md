@@ -1,4 +1,4 @@
-# Claude Code Global V2 – Windows + VS Code
+# Claude Code Global V2 
 
 Personaliza um Claude Code **já instalado** (`%USERPROFILE%\.claude`) com um único comando no PowerShell:
 
